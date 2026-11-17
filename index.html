@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti, Pilitas ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle, #3b1048, #12001c 75%);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #ff9cc6;
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #f5d7e8;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background: #ff9cc6;
+            color: #260b30;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 35px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffc2dc;
+        }
+
+        video {
+            display: none;
+            width: 100%;
+            max-height: 75vh;
+            margin-top: 25px;
+            border-radius: 15px;
+        }
+
+        .corazon {
+            color: #ff9cc6;
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="corazon">♥</div>
+
+        <h1>Para ti, Pilitas</h1>
+
+        <p>Hice algo especial para ti. Espero que te guste. ❤️</p>
+
+        <button id="boton" onclick="mostrarVideo()">
+            Abrir mi sorpresa ♥
+        </button>
+
+        <video id="video" controls playsinline preload="metadata">
+            <source src="flower_for_pilitas.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+        </video>
+
+    </div>
+
+    <script>
+        function mostrarVideo() {
+            const video = document.getElementById("video");
+            const boton = document.getElementById("boton");
+
+            boton.style.display = "none";
+            video.style.display = "block";
+            video.play();
+        }
+    </script>
+
+</body>
+</html>
